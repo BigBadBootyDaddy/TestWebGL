@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'self'; script-src-elem 'unsafe-inline'"> -->
 	
     <title>Test Lucky Orange Integration Site</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
@@ -11,7 +10,6 @@
 	
 	<!-- JQuery -->
 	<script type='text/javascript' src='jquery-3.6.0.min.js'></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 	
 	<!-- Lucky Orange Classic -->
 	
@@ -79,8 +77,8 @@
 	
 		$(document).mousemove(function(event){
 			console.log("mouse moving");
-		  LO.update_canvas("#unity-canvas");
-		  //LO.update_canvas("canvas");
+		  //LO.update_canvas("#unity-canvas");
+		  LO.update_canvas("canvas");
 		});
 		
 		var canvas = document.querySelector("canvas");
