@@ -16,6 +16,8 @@
 	<script type='text/javascript'>
 		window.__lo_site_id = 323432;
 
+		console.log("active");
+
 		(function() {
 			var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
 			wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
@@ -76,54 +78,41 @@
     <script>
 	
 		$(document).mousemove(function(event){
-			console.log("mouse moving");
 		  //LO.update_canvas("#unity-canvas");
 		  LO.update_canvas("canvas");
 		});
 		
-		var canvas = document.querySelector("canvas");
-		var video = document.querySelector("video");
+		<!-- var canvas = document.querySelector("canvas"); -->
+		<!-- var video = document.querySelector("video"); -->
 		
-		var mediaStream = canvas.captureStream(30); // parameter is the frame rate
-		var mediaRecorder = new MediaRecorder(mediaStream);
+		<!-- var mediaStream = canvas.captureStream(30); // parameter is the frame rate -->
+		<!-- var mediaRecorder = new MediaRecorder(mediaStream); -->
 		
-		<!-- console.log("TEST A"); -->
-		<!-- console.log("TEST A"); -->
-		<!-- console.log("TEST A"); -->
-		<!-- console.log(mediaStream); -->
-		<!-- console.log("TEST B"); -->
-		<!-- console.log("TEST B"); -->
-		<!-- console.log("TEST B"); -->
-		<!-- console.log(mediaRecorder); -->
-		<!-- console.log("TEST C"); -->
-		<!-- console.log("TEST C"); -->
-		<!-- console.log("TEST C"); -->
-		
-		// Store the available data returned 
-		var chunks = [];
-		mediaRecorder.ondataavailable = function(e) {
-		  chunks.push(e.data);
-		};
+		<!-- // Store the available data returned  -->
+		<!-- var chunks = []; -->
+		<!-- mediaRecorder.ondataavailable = function(e) { -->
+		  <!-- chunks.push(e.data); -->
+		<!-- }; -->
 	
 	
-		$(`#test-button`).click(function (){
-			// Start recording 
-			mediaRecorder.start();
-			console.log("STARTING RECORDING");
+		<!-- $(`#test-button`).click(function (){ -->
+			<!-- // Start recording  -->
+			<!-- mediaRecorder.start(); -->
+			<!-- console.log("STARTING RECORDING"); -->
 			
-			var testInterval = setInterval(function (){
-				mediaRecorder.stop(); 
-				console.log("STOPPING RECORDING");
-			}, 3000); // Stop after 3 seconds 
-		});
+			<!-- var testInterval = setInterval(function (){ -->
+				<!-- mediaRecorder.stop();  -->
+				<!-- console.log("STOPPING RECORDING"); -->
+			<!-- }, 3000); // Stop after 3 seconds  -->
+		<!-- }); -->
 		
 	
-		mediaRecorder.onstop = function(e) {
-			var blob = new Blob(chunks, { 'type' : 'video/mp4' });
-			chunks = [];
-			var videoURL = URL.createObjectURL(blob);
-			video.src = videoURL;
-		};
+		<!-- mediaRecorder.onstop = function(e) { -->
+			<!-- var blob = new Blob(chunks, { 'type' : 'video/mp4' }); -->
+			<!-- chunks = []; -->
+			<!-- var videoURL = URL.createObjectURL(blob); -->
+			<!-- video.src = videoURL; -->
+		<!-- }; -->
 	
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
