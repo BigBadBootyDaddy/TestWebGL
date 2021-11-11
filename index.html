@@ -49,12 +49,17 @@
     </div>
     <script>
 	
-		$(document).mousemove(function(event){
+		$(document).click(function (event)){
 			console.log("Lucky Orange Update Canvas Call");
-			//LO.update_canvas("#unity-canvas");
 			LO.update_canvas("canvas");
-			//LO.update_canvas_element("canvas");
 		});
+	
+		<!-- $(document).mousemove(function(event){ -->
+			<!-- console.log("Lucky Orange Update Canvas Call"); -->
+			<!-- //LO.update_canvas("#unity-canvas"); -->
+			<!-- LO.update_canvas("canvas"); -->
+			<!-- //LO.update_canvas_element("canvas"); -->
+		<!-- }); -->
 	
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
