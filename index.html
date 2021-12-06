@@ -61,10 +61,17 @@
     </div>
     <script>
 	
-		$(document).click(function (event){
-			console.log("Lucky Orange Update Canvas Call");
-			LO.update_canvas("canvas");
-		});
+		<!-- $(document).click(function (event){ -->
+			<!-- console.log("Lucky Orange Update Canvas Call"); -->
+			<!-- LO.update_canvas("canvas"); -->
+		<!-- }); -->
+	
+		document.getElementById("unity-canvas").addEventListener("click", updateCanvasCall);
+		
+		function updateCanvasCall(){
+			console.log("Lucky Orange Canvas Call");
+			<!-- LO.update_canvas("canvas"); -->
+		}
 	
 		<!-- $(document).mousemove(function(event){ -->
 			<!-- console.log("Lucky Orange Update Canvas Call"); -->
